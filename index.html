@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+<link rel="stylesheet" href="/js/prism/prism.css">
+
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
@@ -13,87 +29,205 @@
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Hexo</title>
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
 
-  
-<meta name="generator" content="Hexo 6.3.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+          <div class="content index posts-expand">
+            
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/12/hello-world/">
 
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/12/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-05-12T02:56:13.816Z" itemprop="datePublished">2023-05-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/12/hello-world/">Hello World</a>
-    </h1>
-  
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
 
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/12/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta">
+
+		
+		
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-05-12 10:56:13 / Modified: 12:17:15" itemprop="dateCreated datePublished" datetime="2023-05-12T10:56:13+08:00">2023-05-12</time>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
@@ -109,501 +243,896 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/12/hello-world/" data-id="clhjzbw1i000g4kalfbmzat4q" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-
-  
-    <article id="post-木棍" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/11/%E6%9C%A8%E6%A3%8D/" class="article-date">
-  <time class="dt-published" datetime="2023-05-11T08:45:00.000Z" itemprop="datePublished">2023-05-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/oj/">oj</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
+    
+
+	 
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/11/%E6%9C%A8%E6%A3%8D/">sticks</a>
-    </h1>
+  
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/11/%E6%9C%A8%E6%A3%8D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/11/%E6%9C%A8%E6%A3%8D/" class="post-title-link" itemprop="url">sticks</a>
+        </h2>
+
+        <div class="post-meta">
+
+  <i class="fa fa-thumb-tack"></i>
+  <font color=7D26CD>置顶</font>
+  <span class="post-meta-divider">|</span>
+
+		
+		
+  <i class="fa fa-thumb-tack"></i>
+  <font color=7D26CD>置顶</font>
+  <span class="post-meta-divider">|</span>
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-05-11 16:45:00" itemprop="dateCreated datePublished" datetime="2023-05-11T16:45:00+08:00">2023-05-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-05-12 11:43:27" itemprop="dateModified" datetime="2023-05-12T11:43:27+08:00">2023-05-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/oj/" itemprop="url" rel="index"><span itemprop="name">oj</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h1 id="sticks"><a href="#sticks" class="headerlink" title="sticks"></a>sticks</h1><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>怎么搜<br>dfs(已经复原几根木棍k，上一个木棍的下标last，当前复原木棒的进度s).</p>
-<h2 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">70</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,m;  <span class="comment">//n木棍数量 </span></span><br><span class="line"><span class="type">int</span> num, len, sum;<span class="comment">//len原来的长度，sum目前小木棍长度之和，num = sum / len;</span></span><br><span class="line"><span class="type">int</span> a[N]; <span class="comment">//储存 木棍</span></span><br><span class="line"><span class="type">bool</span> st[N]; <span class="comment">//标记是否用过某一小木棍</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123; <span class="keyword">return</span> a &gt; b; &#125; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> k, <span class="type">int</span> last, <span class="type">int</span> s)</span></span></span><br><span class="line"><span class="function"></span>&#123;   </span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (k &gt; num)<span class="keyword">return</span> <span class="literal">true</span>; <span class="comment">//所有木棍复原完成</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (s == len)</span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">dfs</span>(k + <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>);<span class="comment">//完成当前木棍的复原，进行下一个</span></span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> fail = <span class="number">0</span>;<span class="comment">//fail记录的是最近一次尝试拼接的木棍长度。这样再回溯时就不会再尝试相同长度的木棍。 （不是很理解还）</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = last; i &lt;= n; i++)<span class="comment">//从last开始</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (!st[i]&amp;&amp;a[i]+s&lt;=len&amp;&amp;fail!=a[i])<span class="comment">//a[i]+s&lt;=len减去不必要的搜索</span></span><br><span class="line">		&#123;</span><br><span class="line">			st[i] = <span class="literal">true</span>;<span class="comment">//标记</span></span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">dfs</span>(k, i, s + a[i]))<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">			st[i] = <span class="literal">false</span>;<span class="comment">//复原</span></span><br><span class="line"></span><br><span class="line">			fail = a[i];</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (s == <span class="number">0</span> || s + a[i] == len)<span class="keyword">return</span> <span class="literal">false</span>;<span class="comment">//（菜狗还不是很理解）</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (cin &gt;&gt; n &amp;&amp; n)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">memset</span>(st, <span class="literal">false</span>, <span class="keyword">sizeof</span> st);</span><br><span class="line">		<span class="built_in">memset</span>(a, <span class="number">0</span>, <span class="keyword">sizeof</span> a);</span><br><span class="line">		m = num = len = sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			cin &gt;&gt; a[i];</span><br><span class="line">			sum += a[i];</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="built_in">sort</span>(a + <span class="number">1</span>, a + <span class="number">1</span> + n, cmp);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (len = a[<span class="number">1</span>]; len &lt;= sum / <span class="number">2</span>; len++)<span class="comment">//保证整除并且len的长度小于sum/2 若大于则只有一根</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (sum % len)<span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">			num = sum / len;</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">dfs</span>(<span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>)) &#123;</span><br><span class="line">				m = <span class="number">1</span>;</span><br><span class="line">				cout &lt;&lt; len &lt;&lt; endl;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(!m)cout &lt;&lt; sum &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <p>dfs+剪纸</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/05/11/%E6%9C%A8%E6%A3%8D/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/11/%E6%9C%A8%E6%A3%8D/" data-id="clhjzbw1k000n4kald7z3gxbd" data-title="sticks" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oj/" rel="tag">oj</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Dijkstra算法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/08/Dijkstra%E7%AE%97%E6%B3%95/" class="article-date">
-  <time class="dt-published" datetime="2023-05-08T13:45:00.000Z" itemprop="datePublished">2023-05-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
+    
+
+	 
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/08/Dijkstra%E7%AE%97%E6%B3%95/">Dijkstra算法</a>
-    </h1>
+  
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/08/Dijkstra%E7%AE%97%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/08/Dijkstra%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">Dijkstra算法</a>
+        </h2>
+
+        <div class="post-meta">
+
+		
+		
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-05-08 21:45:00" itemprop="dateCreated datePublished" datetime="2023-05-08T21:45:00+08:00">2023-05-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-05-12 11:43:23" itemprop="dateModified" datetime="2023-05-12T11:43:23+08:00">2023-05-12</time>
+              </span>
+
+          
+
+        </div>
       </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Dijkstra求最短路（单源最短路，边权为正）"><a href="#Dijkstra求最短路（单源最短路，边权为正）" class="headerlink" title="Dijkstra求最短路（单源最短路，边权为正）"></a>Dijkstra求最短路（单源最短路，边权为正）</h1><p>给定一个 n 个点 m 条边的有向图，图中可能存在重边和自环，所有边权均为正值。<br>请你求出 1 号点到 n 号点的最短距离。</p>
-<h2 id="算法步骤"><a href="#算法步骤" class="headerlink" title="算法步骤"></a>算法步骤</h2><p> a. 初始化 dist[1] &#x3D; 0, dist[i] &#x3D; +inf  S:当前已经确定为最短距离的点<br>    b. for(int i &#x3D; 1; i &lt;&#x3D; n; i ++)<br>        {<br>            1. 寻找不在 S 中距离源点最近的点 t<br>            2. 将 t 加到 S 中<br>            3. 用 t 更新其他点的距离(dist[j] &#x3D; min(dist[j], dist[t] + g[t][j]))<br>        }</p>
-<pre><code>    时间复杂度 n方
-</code></pre>
-<h2 id="正确性证明"><a href="#正确性证明" class="headerlink" title="正确性证明"></a>正确性证明</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/CrazyKeyboardMan/article/details/78219970">https://blog.csdn.net/CrazyKeyboardMan/article/details/78219970</a><br>基于贪心</p>
-<p>提醒：这里读者一定要反复仔细体会Lk<br>的含义，它不断更新的过程正是Dijkstra算法“由近及远，层层扩展”特点的体现。同时思考一下之前提过的“找到一个点后，该点Lk值肯定不会被更改”的原因（理解Lk的含义后，原因其实是显而易见的）。</p>
-<p>以该点去松弛别的点（！st[i] 未使用过） 该点被标记位true 之后不会被松弛故之后不会被更改。</p>
-<p>好吧，直觉上感觉是对的，每次找最小，再由最小去松弛，所有点更新完后，算法结束。</p>
-<h2 id="朴素版"><a href="#朴素版" class="headerlink" title="朴素版"></a>朴素版</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">510</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> g[N][N];    <span class="comment">//为稠密阵所以用邻接矩阵存储</span></span><br><span class="line"><span class="type">int</span> dist[N];    <span class="comment">//用于记录每一个点距离第一个点的距离</span></span><br><span class="line"><span class="type">bool</span> st[N];     <span class="comment">//用于记录该点的最短距离是否已经确定</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,m;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Dijkstra</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(dist, <span class="number">0x3f</span>,<span class="keyword">sizeof</span> dist);     <span class="comment">//初始化距离  0x3f代表无限大</span></span><br><span class="line"></span><br><span class="line">    dist[<span class="number">1</span>]=<span class="number">0</span>;  <span class="comment">//第一个点到自身的距离为0 </span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    二刷的时候没有初始化</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)      <span class="comment">//有n个点所以要进行n次 迭代</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> t=<span class="number">-1</span>;       <span class="comment">//t存储当前访问的点</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++)   <span class="comment">//这里的j代表的是从1号点开始</span></span><br><span class="line">            <span class="keyword">if</span>(!st[j]&amp;&amp;(t==<span class="number">-1</span>||dist[t]&gt;dist[j]))     </span><br><span class="line">                t=j;</span><br><span class="line"></span><br><span class="line">        st[t]=<span class="literal">true</span>;   </span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++)           <span class="comment">//依次更新每个点所到相邻的点路径值</span></span><br><span class="line">            dist[j]=<span class="built_in">min</span>(dist[j],dist[t]+g[t][j]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(dist[n]==<span class="number">0x3f3f3f3f</span>) <span class="keyword">return</span> <span class="number">-1</span>;  <span class="comment">//如果第n个点路径为无穷大即不存在最低路径</span></span><br><span class="line">    <span class="keyword">return</span> dist[n];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">memset</span>(g,<span class="number">0x3f</span>,<span class="keyword">sizeof</span> g);    <span class="comment">//初始化图 因为是求最短路径</span></span><br><span class="line">                                <span class="comment">//所以每个点初始为无限大</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(m--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> x,y,z;</span><br><span class="line">        cin&gt;&gt;x&gt;&gt;y&gt;&gt;z;</span><br><span class="line">        g[x][y]=<span class="built_in">min</span>(g[x][y],z);     <span class="comment">//如果发生重边的情况则保留最短的一条边</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout&lt;&lt;<span class="built_in">Dijkstra</span>()&lt;&lt;endl; </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="优化版"><a href="#优化版" class="headerlink" title="优化版"></a>优化版</h2><p>找最小值（优先队列）和松弛操作（邻接表）优化</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1.5e5</span>+<span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; PII;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,m;</span><br><span class="line"><span class="type">int</span> h[N],e[N],ne[N],w[N],idx;</span><br><span class="line"><span class="type">int</span> d[N];</span><br><span class="line"><span class="type">bool</span> st[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b, <span class="type">int</span> c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    e[idx] = b,w[idx] = c,ne[idx] = h[a],h[a] = idx++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">f</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(d,<span class="number">0x3f</span>,<span class="keyword">sizeof</span> d);</span><br><span class="line">    </span><br><span class="line">    d[<span class="number">1</span>] = <span class="number">0</span>;<span class="comment">// 忘记初始化</span></span><br><span class="line">    </span><br><span class="line">    priority_queue&lt;PII ,vector&lt;PII&gt;,greater&lt;PII&gt; &gt; heap;</span><br><span class="line">    heap.<span class="built_in">push</span>(&#123;<span class="number">0</span>,<span class="number">1</span>&#125;);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(heap.<span class="built_in">size</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">auto</span> t = heap.<span class="built_in">top</span>();</span><br><span class="line">        heap.<span class="built_in">pop</span>(); <span class="comment">//对应朴素版的找最小值</span></span><br><span class="line">        </span><br><span class="line">        <span class="type">int</span> ver = t.second,dis =t.first;</span><br><span class="line">        <span class="keyword">if</span>(st[ver]) <span class="keyword">continue</span>; <span class="comment">// 没有排除 该点已经是最小值且已经以它松弛过别的点</span></span><br><span class="line">        st[ver] = <span class="literal">true</span>;<span class="comment">//标记</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = h[ver];i!=<span class="number">-1</span>;i = ne[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> j  = e[i];</span><br><span class="line">            <span class="keyword">if</span>(d[j]&gt;dis+w[i])<span class="comment">//这里二刷没有注意 入队是有条件的 集合的原因</span></span><br><span class="line">            &#123;</span><br><span class="line">                d[j] = dis+w[i];<span class="comment">//对应朴素版的松弛操作，不需要对不相邻的进行更新</span></span><br><span class="line">            </span><br><span class="line">                heap.<span class="built_in">push</span>(&#123;d[j],j&#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(d[n]==<span class="number">0x3f3f3f3f</span>)<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">return</span> d[n];</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">memset</span>(h,<span class="number">-1</span>,<span class="keyword">sizeof</span> h);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(m--)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="type">int</span> a,b,c;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>,&amp;a,&amp;b,&amp;c);</span><br><span class="line">    <span class="built_in">add</span>(a,b,c);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> t  = <span class="built_in">f</span>();</span><br><span class="line">    cout&lt;&lt;t;  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Dijkstra求最短路</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/05/08/Dijkstra%E7%AE%97%E6%B3%95/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/08/Dijkstra%E7%AE%97%E6%B3%95/" data-id="clhjzbw1a00034kal8l0dddjq" data-title="Dijkstra算法" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-八皇后" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/04/16/%E5%85%AB%E7%9A%87%E5%90%8E/" class="article-date">
-  <time class="dt-published" datetime="2023-04-16T13:57:45.000Z" itemprop="datePublished">2023-04-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
+    
+
+	 
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/04/16/%E5%85%AB%E7%9A%87%E5%90%8E/">n皇后</a>
-    </h1>
+  
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/16/%E5%85%AB%E7%9A%87%E5%90%8E/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/04/16/%E5%85%AB%E7%9A%87%E5%90%8E/" class="post-title-link" itemprop="url">n皇后</a>
+        </h2>
+
+        <div class="post-meta">
+
+		
+		
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-04-16 21:57:45" itemprop="dateCreated datePublished" datetime="2023-04-16T21:57:45+08:00">2023-04-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-05-12 12:03:27" itemprop="dateModified" datetime="2023-05-12T12:03:27+08:00">2023-05-12</time>
+              </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h1 id="递归求全排列"><a href="#递归求全排列" class="headerlink" title="递归求全排列"></a>递归求全排列</h1><p>给定一个整数 n，将数字 1∼n 排成一排，将会有很多种排列方法。</p>
-<p>现在，请你按照字典序将所有的排列方法输出。</p>
-<p>输入样例</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
-
-<p>输出样例</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 2 3</span><br><span class="line">1 3 2</span><br><span class="line">2 1 3</span><br><span class="line">2 3 1</span><br><span class="line">3 1 2</span><br><span class="line">3 2 1</span><br></pre></td></tr></table></figure>
-
-<p>AC代码</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">include&lt;iostream&gt;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> path[N];<span class="comment">//保存序列</span></span><br><span class="line"><span class="type">int</span> state[N];<span class="comment">//数字是否被用过</span></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> u)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(u &gt; n)<span class="comment">//数字填完了，输出</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)<span class="comment">//输出方案</span></span><br><span class="line">            cout &lt;&lt; path[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)<span class="comment">//空位上可以选择的数字为:1 ~ n</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(!state[i])<span class="comment">//如果数字 i 没有被用过</span></span><br><span class="line">        &#123;</span><br><span class="line">            path[u] = i;<span class="comment">//放入空位</span></span><br><span class="line">            state[i] = <span class="number">1</span>;<span class="comment">//数字被用，修改状态</span></span><br><span class="line">            <span class="built_in">dfs</span>(u + <span class="number">1</span>);<span class="comment">//填下一个位</span></span><br><span class="line">            state[i] = <span class="number">0</span>;<span class="comment">//回溯，取出 i</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="built_in">dfs</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>用 path 数组保存排列，当排列的长度为 n 时，是一种方案，输出。<br>用 state 数组表示数字是否用过。当 state[i] 为 1 时：i 已经被用过，state[i] 为 0 时，i 没有被用过。<br>dfs(i) 表示的含义是：在 path[i] 处填写数字，然后递归的在下一个位置填写数字。<br>回溯：第 i 个位置填写某个数字的所有情况都遍历后， 第 i 个位置填写下一个数字。</p>
-<h1 id="皇后问题"><a href="#皇后问题" class="headerlink" title="皇后问题"></a>皇后问题</h1><p>编写一个函数，求解皇后问题：在 n×n 的方格棋盘上，放置 n 个皇后，要求每个皇后不同行、不同列、不同左右对角线。</p>
-<p>输入样例</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
-
-<p>输出样例</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2 4 1 3</span><br><span class="line">3 1 4 2</span><br></pre></td></tr></table></figure>
-
-<p>类似搜全排列 按行搜索 加上限制条件</p>
-<p>AC代码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">const int N = 20;</span><br><span class="line"></span><br><span class="line">int n,hh;</span><br><span class="line">int a[N];</span><br><span class="line">bool col[N],dg[N],udg[N];</span><br><span class="line"></span><br><span class="line">void dfs(int u)</span><br><span class="line">&#123;</span><br><span class="line">    if(u&gt;n)</span><br><span class="line">    &#123;</span><br><span class="line">        for(int i = 1;i&lt;=n;i++)</span><br><span class="line">        cout&lt;&lt;a[i]&lt;&lt;&quot; &quot;;</span><br><span class="line">        puts(&quot;&quot;);</span><br><span class="line">        hh++;</span><br><span class="line">        return ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    for(int i = 1;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        if(!col[i]&amp;&amp;!dg[u+i]&amp;&amp;!udg[i-u+n])</span><br><span class="line">        &#123;</span><br><span class="line">            col[i] = 1;</span><br><span class="line">            dg[u+i] = 1;</span><br><span class="line">            udg[i-u+n] = 1;</span><br><span class="line">            a[u] = i;</span><br><span class="line">            dfs(u+1);</span><br><span class="line">            col[i] = 0;</span><br><span class="line">            dg[u+i] = 0;</span><br><span class="line">            udg[i-u+n] = 0;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line"></span><br><span class="line">    dfs(1);</span><br><span class="line"></span><br><span class="line">    //cout&lt;&lt;hh;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>bool数组用来判断搜索的下一个位置是否可行<br> col列，dg对角线，udg反对角线</p>
-<p>(x,y)-&gt;(u,i)</p>
-<p>y &#x3D; x+b; b &#x3D; y-x; 下标为正 需要加上一个数（随便加，保证为正且规则一样即可）</p>
-<p>y &#x3D; -x+b; b &#x3D; y+x(正) </p>
-
+          <p>讲题</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/04/16/%E5%85%AB%E7%9A%87%E5%90%8E/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/16/%E5%85%AB%E7%9A%87%E5%90%8E/" data-id="clhjzbw1g000c4kal5wkrfhyh" data-title="n皇后" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DFS/" rel="tag">DFS</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-数据结构模拟" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%8B%9F/" class="article-date">
-  <time class="dt-published" datetime="2023-04-11T14:32:14.666Z" itemprop="datePublished">2023-04-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
+    
+
+	 
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%8B%9F/">数据结构（数组模拟）</a>
-    </h1>
+  
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%8B%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%8B%9F/" class="post-title-link" itemprop="url">数据结构（数组模拟）</a>
+        </h2>
+
+        <div class="post-meta">
+
+		
+		
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-04-11 22:32:14" itemprop="dateCreated datePublished" datetime="2023-04-11T22:32:14+08:00">2023-04-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-05-12 11:43:26" itemprop="dateModified" datetime="2023-05-12T11:43:26+08:00">2023-05-12</time>
+              </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h1 id="链表（数组实现）"><a href="#链表（数组实现）" class="headerlink" title="链表（数组实现）"></a>链表（数组实现）</h1><p>实现一个单链表，初始化为空，支持头插，删除，插入</p>
-<p>e[N]数组储存值（类型自定，可以有多个）ne[N]储存下一个值的下标 head头节点 </p>
-<p>idx 数组大小同时每次++相当于开辟新空间然而没有。</p>
-<h2 id="初始化-（数组-0-n-1）"><a href="#初始化-（数组-0-n-1）" class="headerlink" title="初始化 （数组 0-n-1）"></a>初始化 （数组 0-n-1）</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    head = <span class="number">-1</span>;</span><br><span class="line">    idx = <span class="number">0</span>;<span class="comment">//也可以为1 下面的操作都是以idx初始值为0进行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="插入操作（将x插入到下标为k（第k-1个数）的后面）"><a href="#插入操作（将x插入到下标为k（第k-1个数）的后面）" class="headerlink" title="插入操作（将x插入到下标为k（第k+1个数）的后面）"></a>插入操作（将x插入到下标为k（第k+1个数）的后面）</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> k,<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    e[idx] = x;<span class="comment">//插入x</span></span><br><span class="line">    ne[idx] = ne[k];<span class="comment">//idx下一个为原e[k]的下一个</span></span><br><span class="line">    ne[k] = idx;<span class="comment">//e[k]的下一个元素为x 通过ne[k]连接</span></span><br><span class="line">    idx++;<span class="comment">//类似开空间(其实已经开好)</span></span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-<h2 id="删除操作（1-gt-2-gt-3删除2就是1-gt-3-2b并没有删除"><a href="#删除操作（1-gt-2-gt-3删除2就是1-gt-3-2b并没有删除" class="headerlink" title="删除操作（1-&gt;2-&gt;3删除2就是1-&gt;3 ,2b并没有删除)"></a>删除操作（1-&gt;2-&gt;3删除2就是1-&gt;3 ,2b并没有删除)</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">remove</span><span class="params">(<span class="type">int</span> k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ne[k] = ne[ne[k]];</span><br><span class="line">    head = ne[head]<span class="comment">//删除头节点</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = head;i!=<span class="number">-1</span>;i= ne[i])</span><br><span class="line">cout&lt;&lt;e[i]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br></pre></td></tr></table></figure>
-
+          <p>数据结构数组模拟（y总板子）</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%8B%9F/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%8B%9F/" data-id="clhjzbw1j000l4kal0kok6goi" data-title="数据结构（数组模拟）" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-c++指针" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/04/11/c++%E6%8C%87%E9%92%88/" class="article-date">
-  <time class="dt-published" datetime="2023-04-11T09:21:20.000Z" itemprop="datePublished">2023-04-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
+    
+
+	 
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/04/11/c++%E6%8C%87%E9%92%88/">c++指针</a>
-    </h1>
+  
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/11/c++%E6%8C%87%E9%92%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/04/11/c++%E6%8C%87%E9%92%88/" class="post-title-link" itemprop="url">c++指针</a>
+        </h2>
+
+        <div class="post-meta">
+
+		
+		
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-04-11 17:21:20" itemprop="dateCreated datePublished" datetime="2023-04-11T17:21:20+08:00">2023-04-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-05-12 12:03:25" itemprop="dateModified" datetime="2023-05-12T12:03:25+08:00">2023-05-12</time>
+              </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>c++指针学习</p>
-<p>为何学习指针呢？qwq因为用结构体实现的链表需要指针（看不懂）。</p>
-<h2 id="1、何为指针"><a href="#1、何为指针" class="headerlink" title="1、何为指针"></a>1、何为指针</h2><p>指针是程序数据在内存中的地址，而指针变量是用来保存这些地址的变量。</p>
-<h2 id="2、内存数据的规律"><a href="#2、内存数据的规律" class="headerlink" title="2、内存数据的规律"></a>2、内存数据的规律</h2><p> 1.计算机中所有数据都是以二进制储存的。<br> 2.数据类型决定了占用内存的大小<br> 3.占据内存的地址就是地址值最小的那个字节的地址 如数组a[10]，则数组a的地址为a[0]的地址。</p>
-<h2 id="3、指针变量"><a href="#3、指针变量" class="headerlink" title="3、指针变量"></a>3、指针变量</h2><p> 指针变量就是用来保存指针的对象，我一般理解为保存地址。<br> 如果说指针变量p保存了变量a的地址，我们称p指向了变量a。<br> 我认为指针变量本身也是变量，所有指针变量的地址也可以被指向。</p>
-<h2 id="4、创造指针变量"><a href="#4、创造指针变量" class="headerlink" title="4、创造指针变量"></a>4、创造指针变量</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">T *p[<span class="number">10</span>];</span><br><span class="line">T 为类型（<span class="type">int</span>,<span class="type">double</span>,<span class="keyword">struct</span>等);</span><br></pre></td></tr></table></figure>
-
-<h2 id="5、获取对象地址"><a href="#5、获取对象地址" class="headerlink" title="5、获取对象地址"></a>5、获取对象地址</h2><p>指针保存地址，要想获得地址，需要取地址符（&amp;）。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">add</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> a = <span class="number">5</span>,b[<span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> *p = &amp;a;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> *z = b;z指向b[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line"><span class="built_in">int</span> (*m)[<span class="number">10</span>] = &amp;b;</span><br><span class="line"></span><br><span class="line"><span class="built_in">int</span>(*n)(<span class="type">int</span>,<span class="type">int</span>) = add;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">char</span> *l  = <span class="string">&quot;hello world&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>我们发现&amp;有时用，有时不用。<br> 小结：<br>1.数组名的值就是首个元素的值（数组在内存中连续储存）。<br>2.函数名的地址就是这个函数的地址。<br>3.字符串字面值常量作为右值时，就是这个字符串对应的字符数组的名称，也就是字符串的地址 。</p>
-<h2 id="6、解析地址对象"><a href="#6、解析地址对象" class="headerlink" title="6、解析地址对象"></a>6、解析地址对象</h2><p> 如果指针指向了一个地址，则允许使用接应用符（*）来访问对象，如下：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> age = <span class="number">19</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> *p_age = &amp;age;</span><br><span class="line"></span><br><span class="line">*p_age = <span class="number">20</span>;<span class="comment">//通过指针修改指向的内存数据</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,*p_age)<span class="comment">//通过指针读取</span></span><br></pre></td></tr></table></figure>
-
-<p> 对于结构体和类 则使用-&gt;符号访问内部成员：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Student</span></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">char</span> name[<span class="number">31</span>];</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="type">float</span> score;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    Student stu = &#123;<span class="string">&quot;Bob&quot;</span> , <span class="number">19</span>, <span class="number">98.0</span>&#125;;</span><br><span class="line"></span><br><span class="line">    Student*   p_s = &amp;stu;</span><br><span class="line"></span><br><span class="line">    p_s-&gt;age = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line">    p_s-&gt;score = <span class="number">99.0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;name:%s age:%d\n&quot;</span>,p_s-&gt;name,p_s-&gt;age);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="7、指针的状态"><a href="#7、指针的状态" class="headerlink" title="7、指针的状态"></a>7、指针的状态</h2><p> 指针的值（地址）总会是下列四种状态之一：<br> 1.指向一个对象的地址<br> 2.指向紧邻对象的下一个空间  用于迭代器和指针的运算 如end()就不是指向最后一个元素而是最后一个元素的下一个<br> 3.空指针 NULL（0）<br> 4.无效指针（野指针） 不是很懂搜到的记录一下<br>无效指针：指针变量的值是NULL，或者未知的地址值，或者是当前应用程序不可访问的地址值，这样的指针就是无效指针，不能对他们做解指针操作，否则程序会出现运行时错误，导致程序意外终止。<br>任何一个指针变量在做解地址操作前，都必须保证它指向的是有效的，可用的内存块，否则就会出错。坏指针是造成C语言Bug的最频繁的原因之一。<br>未经初始化的指针就是个无效指针，所以在定义指针变量的时候一定要进行初始化。如果实在是不知道指针的指向，则使用nullptr或NULL进行赋值。</p>
-<h2 id="8、指针之间的赋值"><a href="#8、指针之间的赋值" class="headerlink" title="8、指针之间的赋值"></a>8、指针之间的赋值</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *p = &amp;a;</span><br><span class="line"><span class="type">int</span> *p1 = p;</span><br></pre></td></tr></table></figure>
-
-<p>p与p1地址不同但指向的内存地址相同。</p>
-
+          <p>c++指针</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/04/11/c++%E6%8C%87%E9%92%88/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/11/c++%E6%8C%87%E9%92%88/" data-id="clhjzbw1f000b4kalapvh6zpo" data-title="c++指针" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8C%87%E9%92%88/" rel="tag">指针</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-汉诺塔" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/04/09/%E6%B1%89%E8%AF%BA%E5%A1%94/" class="article-date">
-  <time class="dt-published" datetime="2023-04-09T14:15:42.000Z" itemprop="datePublished">2023-04-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
+    
+
+	 
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/04/09/%E6%B1%89%E8%AF%BA%E5%A1%94/">问题求解策略</a>
-    </h1>
+  
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/09/%E6%B1%89%E8%AF%BA%E5%A1%94/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/04/09/%E6%B1%89%E8%AF%BA%E5%A1%94/" class="post-title-link" itemprop="url">问题求解策略</a>
+        </h2>
+
+        <div class="post-meta">
+
+  <i class="fa fa-thumb-tack"></i>
+  <font color=7D26CD>置顶</font>
+  <span class="post-meta-divider">|</span>
+
+		
+		
+  <i class="fa fa-thumb-tack"></i>
+  <font color=7D26CD>置顶</font>
+  <span class="post-meta-divider">|</span>
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-04-09 22:15:42" itemprop="dateCreated datePublished" datetime="2023-04-09T22:15:42+08:00">2023-04-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-05-12 11:43:27" itemprop="dateModified" datetime="2023-05-12T11:43:27+08:00">2023-05-12</time>
+              </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>好好学习，天天向上。</p>
-<h1 id="汉诺塔问题"><a href="#汉诺塔问题" class="headerlink" title="汉诺塔问题"></a>汉诺塔问题</h1><p>古代有一座汉诺塔， 塔内有 3 个座 A、B、C,A 座上有 几 个盘子， 盘子大小不等， 大的在下，小的 在上， 如图 4−1 所示。有一个和尚想把这n个盘子从A座移到 C座， 但每次只能移动一个盘子， 并且在移动过程中， 3 个座上的盘子始终保持大盘在下，小 盘在上。在移动过程中可以利用 B座来放盘子。要求输出移动的步骤。</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>只有一个盘子那就直接 a-&gt;c.</p>
-<p>两个盘子需要先将上面的盘子移动到b盘</p>
-<p>先a-&gt;b 再a-&gt;c 再b-&gt;c</p>
-<p>三个盘子需要先将前两个盘子移动到b盘，再把第三个盘子移动到c盘，最后把上面两个盘子移动c盘上去</p>
-<p>前两个盘子移动到b盘，就是问题转化成a到b 借助c盘  上面两个盘子从b到c转化成b到c借助a</p>
-<p>总的思路就是 先把前n-1个盘子移动到b盘，</p>
-<p>再把最后第n个盘子移动到c盘，</p>
-<p>最后把前n-1个盘子移动到C盘上。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/2431499191/tu@main/202305041624109.png" alt="汉诺塔"></p>
-<p>递归代码</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">pf</span><span class="params">(<span class="type">char</span> a,<span class="type">char</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%c-&gt;%c\n&quot;</span>,a,b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">f</span><span class="params">(<span class="type">char</span> a,<span class="type">char</span> b, <span class="type">char</span> c,<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(n==<span class="number">0</span>)<span class="keyword">return</span> ;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">f</span>(a,c,b,n<span class="number">-1</span>);  </span><br><span class="line">	</span><br><span class="line">	<span class="built_in">pf</span>(a,c);</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">f</span>(b,a,c,n<span class="number">-1</span>); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	</span><br><span class="line">	<span class="type">char</span> a = <span class="string">&#x27;A&#x27;</span>,b = <span class="string">&#x27;B&#x27;</span>,c = <span class="string">&#x27;C&#x27;</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">f</span>(a,b,c,n);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <p>OJ题目不定时更新。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/04/09/%E6%B1%89%E8%AF%BA%E5%A1%94/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/09/%E6%B1%89%E8%AF%BA%E5%A1%94/" data-id="clhjzbw1l000p4kal7n1bfr3p" data-title="问题求解策略" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OJ%EF%BC%8C%E7%AE%97%E6%B3%95/" rel="tag">OJ，算法</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-我的第一篇博客" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/04/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="article-date">
-  <time class="dt-published" datetime="2023-04-09T14:06:34.000Z" itemprop="datePublished">2023-04-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
+    
+
+	 
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/04/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
-    </h1>
+  
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/04/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">我的第一篇博客</a>
+        </h2>
+
+        <div class="post-meta">
+
+		
+		
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-04-09 22:06:34" itemprop="dateCreated datePublished" datetime="2023-04-09T22:06:34+08:00">2023-04-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-05-12 11:43:25" itemprop="dateModified" datetime="2023-05-12T11:43:25+08:00">2023-05-12</time>
+              </span>
+
+          
+
+        </div>
       </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello World&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>你好世界。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/04/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" data-id="clhjzbw1j000i4kalc5pv0gli" data-title="我的第一篇博客" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/oj/">oj</a></li></ul>
-    </div>
-  </div>
+    
+    
+
+	 
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
 
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DFS/" rel="tag">DFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OJ%EF%BC%8C%E7%AE%97%E6%B3%95/" rel="tag">OJ，算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oj/" rel="tag">oj</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8C%87%E9%92%88/" rel="tag">指针</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
-    </div>
-  </div>
 
 
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/OJ%EF%BC%8C%E7%AE%97%E6%B3%95/" style="font-size: 10px;">OJ，算法</a> <a href="/tags/oj/" style="font-size: 10px;">oj</a> <a href="/tags/%E6%8C%87%E9%92%88/" style="font-size: 10px;">指针</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li></ul>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
+  <aside class="sidebar">
+    <div class="sidebar-inner">
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2023/05/12/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/11/%E6%9C%A8%E6%A3%8D/">sticks</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/08/Dijkstra%E7%AE%97%E6%B3%95/">Dijkstra算法</a>
-          </li>
-        
-          <li>
-            <a href="/2023/04/16/%E5%85%AB%E7%9A%87%E5%90%8E/">n皇后</a>
-          </li>
-        
-          <li>
-            <a href="/2023/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%8B%9F/">数据结构（数组模拟）</a>
-          </li>
-        
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
       </ul>
-    </div>
-  </div>
 
-  
-</aside>
-        
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2023 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="John Doe"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/2431499191" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;2431499191" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
   </div>
-</footer>
+
+
+
+      </div>
 
     </div>
-    <nav id="mobile-nav">
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
   
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/01/2023 10:00:00"); //此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒.";
+    }
+setInterval("createtime()",250);
+</script>
+
+<script src="/js/prism/prism.js" async></script>
 
 
-<script src="/js/jquery-3.4.1.min.js"></script>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+
+<script src="/js/prism/prism.js" async></script>
+        
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
 
 
 
 
 
+      </div>
+    </footer>
   </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+    </div>
 </body>
 </html>
