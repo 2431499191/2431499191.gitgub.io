@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>数据结构（数组模拟） | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="数据结构数组模拟（y总板子）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构（数组模拟）">
+<meta property="og:url" content="http://example.com/2023/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%8B%9F/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="数据结构数组模拟（y总板子）">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-04-11T14:32:14.666Z">
+<meta property="article:modified_time" content="2023-04-13T00:59:26.543Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="数据结构">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-数据结构模拟" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%8B%9F/" class="article-date">
+  <time class="dt-published" datetime="2023-04-11T14:32:14.666Z" itemprop="datePublished">2023-04-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      数据结构（数组模拟）
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="链表（数组实现）"><a href="#链表（数组实现）" class="headerlink" title="链表（数组实现）"></a>链表（数组实现）</h1><p>实现一个单链表，初始化为空，支持头插，删除，插入</p>
+<p>e[N]数组储存值（类型自定，可以有多个）ne[N]储存下一个值的下标 head头节点 </p>
+<p>idx 数组大小同时每次++相当于开辟新空间然而没有。</p>
+<h2 id="初始化-（数组-0-n-1）"><a href="#初始化-（数组-0-n-1）" class="headerlink" title="初始化 （数组 0-n-1）"></a>初始化 （数组 0-n-1）</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">void init()</span><br><span class="line">&#123;</span><br><span class="line">    head = -1;</span><br><span class="line">    idx = 0;//也可以为1 下面的操作都是以idx初始值为0进行</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="插入操作（将x插入到下标为k（第k-1个数）的后面）"><a href="#插入操作（将x插入到下标为k（第k-1个数）的后面）" class="headerlink" title="插入操作（将x插入到下标为k（第k+1个数）的后面）"></a>插入操作（将x插入到下标为k（第k+1个数）的后面）</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void add(int k,int x)</span><br><span class="line">&#123;</span><br><span class="line">    e[idx] = x;//插入x</span><br><span class="line">    ne[idx] = ne[k];//idx下一个为原e[k]的下一个</span><br><span class="line">    ne[k] = idx;//e[k]的下一个元素为x 通过ne[k]连接</span><br><span class="line">    idx++;//类似开空间(其实已经开好)</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<h2 id="删除操作（1-gt-2-gt-3删除2就是1-gt-3-2b并没有删除"><a href="#删除操作（1-gt-2-gt-3删除2就是1-gt-3-2b并没有删除" class="headerlink" title="删除操作（1-&gt;2-&gt;3删除2就是1-&gt;3 ,2b并没有删除)"></a>删除操作（1-&gt;2-&gt;3删除2就是1-&gt;3 ,2b并没有删除)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">void remove(int k)</span><br><span class="line">&#123;</span><br><span class="line">    ne[k] = ne[ne[k]];</span><br><span class="line">    head = ne[head]//删除头节点</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for(int i = head;i!=-1;i= ne[i])</span><br><span class="line">cout&lt;&lt;e[i]&lt;&lt;&quot; &quot;;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%8B%9F/" data-id="clhjzbw1j000l4kal0kok6goi" data-title="数据结构（数组模拟）" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/04/16/%E5%85%AB%E7%9A%87%E5%90%8E/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          n皇后
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/04/11/c++%E6%8C%87%E9%92%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">c++指针</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/oj/">oj</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DFS/" rel="tag">DFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OJ%EF%BC%8C%E7%AE%97%E6%B3%95/" rel="tag">OJ，算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oj/" rel="tag">oj</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8C%87%E9%92%88/" rel="tag">指针</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/OJ%EF%BC%8C%E7%AE%97%E6%B3%95/" style="font-size: 10px;">OJ，算法</a> <a href="/tags/oj/" style="font-size: 10px;">oj</a> <a href="/tags/%E6%8C%87%E9%92%88/" style="font-size: 10px;">指针</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/05/12/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/11/%E6%9C%A8%E6%A3%8D/">sticks</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/08/Dijkstra%E7%AE%97%E6%B3%95/">Dijkstra算法</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/16/%E5%85%AB%E7%9A%87%E5%90%8E/">n皇后</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%8B%9F/">数据结构（数组模拟）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

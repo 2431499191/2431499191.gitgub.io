@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>n皇后 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="讲题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="n皇后">
+<meta property="og:url" content="http://example.com/2023/04/16/%E5%85%AB%E7%9A%87%E5%90%8E/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="讲题">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-04-16T13:57:45.000Z">
+<meta property="article:modified_time" content="2023-04-20T00:36:24.063Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="DFS">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-八皇后" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/04/16/%E5%85%AB%E7%9A%87%E5%90%8E/" class="article-date">
+  <time class="dt-published" datetime="2023-04-16T13:57:45.000Z" itemprop="datePublished">2023-04-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      n皇后
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="递归求全排列"><a href="#递归求全排列" class="headerlink" title="递归求全排列"></a>递归求全排列</h1><p>给定一个整数 n，将数字 1∼n 排成一排，将会有很多种排列方法。</p>
+<p>现在，请你按照字典序将所有的排列方法输出。</p>
+<p>输入样例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+
+<p>输出样例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 2 3</span><br><span class="line">1 3 2</span><br><span class="line">2 1 3</span><br><span class="line">2 3 1</span><br><span class="line">3 1 2</span><br><span class="line">3 2 1</span><br></pre></td></tr></table></figure>
+
+<p>AC代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int N = 10;</span><br><span class="line">int path[N];//保存序列</span><br><span class="line">int state[N];//数字是否被用过</span><br><span class="line">int n;</span><br><span class="line">void dfs(int u)</span><br><span class="line">&#123;</span><br><span class="line">    if(u &gt; n)//数字填完了，输出</span><br><span class="line">    &#123;</span><br><span class="line">        for(int i = 1; i &lt;= n; i++)//输出方案</span><br><span class="line">            cout &lt;&lt; path[i] &lt;&lt; &quot; &quot;;</span><br><span class="line">        cout &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for(int i = 1; i &lt;= n; i++)//空位上可以选择的数字为:1 ~ n</span><br><span class="line">    &#123;</span><br><span class="line">        if(!state[i])//如果数字 i 没有被用过</span><br><span class="line">        &#123;</span><br><span class="line">            path[u] = i;//放入空位</span><br><span class="line">            state[i] = 1;//数字被用，修改状态</span><br><span class="line">            dfs(u + 1);//填下一个位</span><br><span class="line">            state[i] = 0;//回溯，取出 i</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    dfs(1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用 path 数组保存排列，当排列的长度为 n 时，是一种方案，输出。<br>用 state 数组表示数字是否用过。当 state[i] 为 1 时：i 已经被用过，state[i] 为 0 时，i 没有被用过。<br>dfs(i) 表示的含义是：在 path[i] 处填写数字，然后递归的在下一个位置填写数字。<br>回溯：第 i 个位置填写某个数字的所有情况都遍历后， 第 i 个位置填写下一个数字。</p>
+<h1 id="皇后问题"><a href="#皇后问题" class="headerlink" title="皇后问题"></a>皇后问题</h1><p>编写一个函数，求解皇后问题：在 n×n 的方格棋盘上，放置 n 个皇后，要求每个皇后不同行、不同列、不同左右对角线。</p>
+<p>输入样例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
+
+<p>输出样例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2 4 1 3</span><br><span class="line">3 1 4 2</span><br></pre></td></tr></table></figure>
+
+<p>类似搜全排列 按行搜索 加上限制条件</p>
+<p>AC代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">const int N = 20;</span><br><span class="line"></span><br><span class="line">int n,hh;</span><br><span class="line">int a[N];</span><br><span class="line">bool col[N],dg[N],udg[N];</span><br><span class="line"></span><br><span class="line">void dfs(int u)</span><br><span class="line">&#123;</span><br><span class="line">    if(u&gt;n)</span><br><span class="line">    &#123;</span><br><span class="line">        for(int i = 1;i&lt;=n;i++)</span><br><span class="line">        cout&lt;&lt;a[i]&lt;&lt;&quot; &quot;;</span><br><span class="line">        puts(&quot;&quot;);</span><br><span class="line">        hh++;</span><br><span class="line">        return ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    for(int i = 1;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        if(!col[i]&amp;&amp;!dg[u+i]&amp;&amp;!udg[i-u+n])</span><br><span class="line">        &#123;</span><br><span class="line">            col[i] = 1;</span><br><span class="line">            dg[u+i] = 1;</span><br><span class="line">            udg[i-u+n] = 1;</span><br><span class="line">            a[u] = i;</span><br><span class="line">            dfs(u+1);</span><br><span class="line">            col[i] = 0;</span><br><span class="line">            dg[u+i] = 0;</span><br><span class="line">            udg[i-u+n] = 0;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line"></span><br><span class="line">    dfs(1);</span><br><span class="line"></span><br><span class="line">    //cout&lt;&lt;hh;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>bool数组用来判断搜索的下一个位置是否可行<br> col列，dg对角线，udg反对角线</p>
+<p>(x,y)-&gt;(u,i)</p>
+<p>y &#x3D; x+b; b &#x3D; y-x; 下标为正 需要加上一个数（随便加，保证为正且规则一样即可）</p>
+<p>y &#x3D; -x+b; b &#x3D; y+x(正) </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/04/16/%E5%85%AB%E7%9A%87%E5%90%8E/" data-id="clhjzbw1g000c4kal5wkrfhyh" data-title="n皇后" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DFS/" rel="tag">DFS</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/05/08/Dijkstra%E7%AE%97%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Dijkstra算法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%8B%9F/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">数据结构（数组模拟）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/oj/">oj</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DFS/" rel="tag">DFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OJ%EF%BC%8C%E7%AE%97%E6%B3%95/" rel="tag">OJ，算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oj/" rel="tag">oj</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8C%87%E9%92%88/" rel="tag">指针</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/OJ%EF%BC%8C%E7%AE%97%E6%B3%95/" style="font-size: 10px;">OJ，算法</a> <a href="/tags/oj/" style="font-size: 10px;">oj</a> <a href="/tags/%E6%8C%87%E9%92%88/" style="font-size: 10px;">指针</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/05/12/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/11/%E6%9C%A8%E6%A3%8D/">sticks</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/08/Dijkstra%E7%AE%97%E6%B3%95/">Dijkstra算法</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/16/%E5%85%AB%E7%9A%87%E5%90%8E/">n皇后</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%8B%9F/">数据结构（数组模拟）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

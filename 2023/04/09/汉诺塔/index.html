@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>问题求解策略 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="OJ题目不定时更新。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="问题求解策略">
+<meta property="og:url" content="http://example.com/2023/04/09/%E6%B1%89%E8%AF%BA%E5%A1%94/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="OJ题目不定时更新。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/2431499191/tu@main/202305041624109.png">
+<meta property="article:published_time" content="2023-04-09T14:15:42.000Z">
+<meta property="article:modified_time" content="2023-05-11T08:54:17.933Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="OJ，算法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/2431499191/tu@main/202305041624109.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-汉诺塔" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/04/09/%E6%B1%89%E8%AF%BA%E5%A1%94/" class="article-date">
+  <time class="dt-published" datetime="2023-04-09T14:15:42.000Z" itemprop="datePublished">2023-04-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      问题求解策略
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>好好学习，天天向上。</p>
+<h1 id="汉诺塔问题"><a href="#汉诺塔问题" class="headerlink" title="汉诺塔问题"></a>汉诺塔问题</h1><p>古代有一座汉诺塔， 塔内有 3 个座 A、B、C,A 座上有 几 个盘子， 盘子大小不等， 大的在下，小的 在上， 如图 4−1 所示。有一个和尚想把这n个盘子从A座移到 C座， 但每次只能移动一个盘子， 并且在移动过程中， 3 个座上的盘子始终保持大盘在下，小 盘在上。在移动过程中可以利用 B座来放盘子。要求输出移动的步骤。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>只有一个盘子那就直接 a-&gt;c.</p>
+<p>两个盘子需要先将上面的盘子移动到b盘</p>
+<p>先a-&gt;b 再a-&gt;c 再b-&gt;c</p>
+<p>三个盘子需要先将前两个盘子移动到b盘，再把第三个盘子移动到c盘，最后把上面两个盘子移动c盘上去</p>
+<p>前两个盘子移动到b盘，就是问题转化成a到b 借助c盘  上面两个盘子从b到c转化成b到c借助a</p>
+<p>总的思路就是 先把前n-1个盘子移动到b盘，</p>
+<p>再把最后第n个盘子移动到c盘，</p>
+<p>最后把前n-1个盘子移动到C盘上。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/2431499191/tu@main/202305041624109.png" alt="汉诺塔"></p>
+<p>递归代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">void pf(char a,char b)</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;%c-&gt;%c\n&quot;,a,b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void f(char a,char b, char c,int n)</span><br><span class="line">&#123;</span><br><span class="line">	if(n==0)return ;</span><br><span class="line">	</span><br><span class="line">	f(a,c,b,n-1);  </span><br><span class="line">	</span><br><span class="line">	pf(a,c);</span><br><span class="line">	</span><br><span class="line">	f(b,a,c,n-1); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	</span><br><span class="line">	char a = &#x27;A&#x27;,b = &#x27;B&#x27;,c = &#x27;C&#x27;;</span><br><span class="line">	</span><br><span class="line">	f(a,b,c,n);</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/04/09/%E6%B1%89%E8%AF%BA%E5%A1%94/" data-id="clhjzbw1l000p4kal7n1bfr3p" data-title="问题求解策略" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OJ%EF%BC%8C%E7%AE%97%E6%B3%95/" rel="tag">OJ，算法</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/04/11/c++%E6%8C%87%E9%92%88/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          c++指针
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/04/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">我的第一篇博客</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/oj/">oj</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DFS/" rel="tag">DFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OJ%EF%BC%8C%E7%AE%97%E6%B3%95/" rel="tag">OJ，算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oj/" rel="tag">oj</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8C%87%E9%92%88/" rel="tag">指针</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/OJ%EF%BC%8C%E7%AE%97%E6%B3%95/" style="font-size: 10px;">OJ，算法</a> <a href="/tags/oj/" style="font-size: 10px;">oj</a> <a href="/tags/%E6%8C%87%E9%92%88/" style="font-size: 10px;">指针</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/05/12/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/11/%E6%9C%A8%E6%A3%8D/">sticks</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/08/Dijkstra%E7%AE%97%E6%B3%95/">Dijkstra算法</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/16/%E5%85%AB%E7%9A%87%E5%90%8E/">n皇后</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A8%A1%E6%8B%9F/">数据结构（数组模拟）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
