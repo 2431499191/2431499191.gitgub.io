@@ -22,20 +22,20 @@
 
 <link rel="stylesheet" href="/js/prism/prism.css">
 
-  <meta name="description" content="思路 怎么搜dfs(已经复原几根木棍k，上一个木棍的下标last，当前复原木棒的进度s).">
+  <meta name="description" content="题面在一个 4 * 4 的棋盘上，每个格子都摆着一个棋子。棋子一面为黑，一面为白。有一种操作叫做“翻转”，对某一枚棋子做“翻转”操作，则会将该棋子及其上下左右的 4 枚棋子翻过来。给定初始的棋盘局面（有的棋子黑面朝上，有的棋子白面朝上），求最少需要多少次操作，能使得所有棋子都白面朝上或黑面朝上。 样例输入1234bwwbbbwbbwwbbwww  样例输出14">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sticks">
-<meta property="og:url" content="http://example.com/2023/05/11/%E6%9C%A8%E6%A3%8D/index.html">
+<meta property="og:title" content="Flip Game">
+<meta property="og:url" content="http://example.com/2023/05/17/Flip-Game/index.html">
 <meta property="og:site_name" content="Fly">
-<meta property="og:description" content="思路 怎么搜dfs(已经复原几根木棍k，上一个木棍的下标last，当前复原木棒的进度s).">
+<meta property="og:description" content="题面在一个 4 * 4 的棋盘上，每个格子都摆着一个棋子。棋子一面为黑，一面为白。有一种操作叫做“翻转”，对某一枚棋子做“翻转”操作，则会将该棋子及其上下左右的 4 枚棋子翻过来。给定初始的棋盘局面（有的棋子黑面朝上，有的棋子白面朝上），求最少需要多少次操作，能使得所有棋子都白面朝上或黑面朝上。 样例输入1234bwwbbbwbbwwbbwww  样例输出14">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-11T08:45:00.000Z">
-<meta property="article:modified_time" content="2023-05-15T09:22:19.907Z">
+<meta property="article:published_time" content="2023-05-17T08:50:26.000Z">
+<meta property="article:modified_time" content="2023-05-17T08:55:15.929Z">
 <meta property="article:author" content="大臣">
-<meta property="article:tag" content="oj">
+<meta property="article:tag" content="oj；">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2023/05/11/%E6%9C%A8%E6%A3%8D/">
+<link rel="canonical" href="http://example.com/2023/05/17/Flip-Game/">
 
 
 <script id="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>Sticks | Fly</title>
+  <title>Flip Game | Fly</title>
   
 
 
@@ -191,7 +191,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/11/%E6%9C%A8%E6%A3%8D/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/17/Flip-Game/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -204,7 +204,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Sticks
+          Flip Game
         </h1>
 
         <div class="post-meta">
@@ -216,24 +216,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2023-05-11 16:45:00" itemprop="dateCreated datePublished" datetime="2023-05-11T16:45:00+08:00">2023-05-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-05-15 17:22:19" itemprop="dateModified" datetime="2023-05-15T17:22:19+08:00">2023-05-15</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/oj/" itemprop="url" rel="index"><span itemprop="name">oj</span></a>
-                </span>
+              <time title="创建时间：2023-05-17 16:50:26 / 修改时间：16:55:15" itemprop="dateCreated datePublished" datetime="2023-05-17T16:50:26+08:00">2023-05-17</time>
             </span>
 
           
@@ -254,12 +239,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>思路 怎么搜dfs(已经复原几根木棍k，上一个木棍的下标last，当前复原木棒的进度s).</p>
+        <h2 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h2><p>在一个 4 * 4 的棋盘上，每个格子都摆着一个棋子。棋子一面为黑，一面为白。有一种操作叫做“翻转”，对某一枚棋子做“翻转”操作，则会将该棋子及其上下左右的 4 枚棋子翻过来。给定初始的棋盘局面（有的棋子黑面朝上，有的棋子白面朝上），求最少需要多少次操作，能使得所有棋子都白面朝上或黑面朝上。</p>
+<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bwwb</span><br><span class="line">bbwb</span><br><span class="line">bwwb</span><br><span class="line">bwww</span><br></pre></td></tr></table></figure>
+
+<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
 <span id="more"></span>
 
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>类似八数码 bfs搜就行</p>
+<h2 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;unordered_map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;queue&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">4</span>;</span><br><span class="line"></span><br><span class="line">string start;</span><br><span class="line">queue&lt;string&gt; q;</span><br><span class="line">unordered_map&lt;string, <span class="type">int</span>&gt; dis;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> dx[<span class="number">5</span>] = &#123;<span class="number">0</span>, <span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span> &#125;, dy[<span class="number">5</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">bfs</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	q.<span class="built_in">push</span>(start);</span><br><span class="line">	dis[start] = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (!q.<span class="built_in">empty</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		string t = q.<span class="built_in">front</span>();</span><br><span class="line">		q.<span class="built_in">pop</span>();</span><br><span class="line"></span><br><span class="line">		string str = t;</span><br><span class="line"></span><br><span class="line">		</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (t.<span class="built_in">find</span>(<span class="string">&#x27;b&#x27;</span>)== t.npos || t.<span class="built_in">find</span>(<span class="string">&#x27;w&#x27;</span>)==t.npos)<span class="keyword">return</span> dis[t];</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">15</span>; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="type">int</span> pos = i;</span><br><span class="line">			<span class="type">int</span> x = pos / <span class="number">4</span>, y = pos % <span class="number">4</span>;</span><br><span class="line"></span><br><span class="line">			</span><br><span class="line"></span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= <span class="number">4</span>; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="type">int</span> xx = x + dx[j], yy = y + dy[j];</span><br><span class="line">				</span><br><span class="line">				<span class="keyword">if</span> (xx &gt;= <span class="number">0</span> &amp;&amp; xx &lt;= <span class="number">3</span> &amp;&amp; yy &gt;= <span class="number">0</span> &amp;&amp; yy &lt;= <span class="number">3</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					</span><br><span class="line">					<span class="type">char</span> t = str[xx * <span class="number">4</span> + yy];</span><br><span class="line">					<span class="keyword">if</span> (t == <span class="string">&#x27;b&#x27;</span>)str[xx * <span class="number">4</span> + yy] = <span class="string">&#x27;w&#x27;</span>;</span><br><span class="line">					<span class="keyword">if</span> (t == <span class="string">&#x27;w&#x27;</span>)str[xx * <span class="number">4</span> + yy] = <span class="string">&#x27;b&#x27;</span>;</span><br><span class="line">					</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (str != t&amp;&amp;!dis.<span class="built_in">count</span>(str)) &#123;</span><br><span class="line">				dis[str] = dis[t] + <span class="number">1</span>;</span><br><span class="line">				q.<span class="built_in">push</span>(str);</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;Impossible&quot;</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		string c;</span><br><span class="line">		cin &gt;&gt; c;</span><br><span class="line">		start += c;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> t = <span class="built_in">bfs</span>();</span><br><span class="line">	<span class="keyword">if</span> (t == <span class="number">-1</span>) cout &lt;&lt; <span class="string">&quot;Impossible&quot;</span>;</span><br><span class="line">	<span class="keyword">if</span> (t == <span class="number">0</span>)cout &lt;&lt; <span class="string">&quot;0&quot;</span>;</span><br><span class="line">	<span class="keyword">if</span> (t != <span class="number">-1</span> &amp;&amp; t)cout &lt;&lt; t;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-<h1 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">70</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,m;  <span class="comment">//n木棍数量 </span></span><br><span class="line"><span class="type">int</span> num, len, sum;<span class="comment">//len原来的长度，sum目前小木棍长度之和，num = sum / len;</span></span><br><span class="line"><span class="type">int</span> a[N]; <span class="comment">//储存 木棍</span></span><br><span class="line"><span class="type">bool</span> st[N]; <span class="comment">//标记是否用过某一小木棍</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123; <span class="keyword">return</span> a &gt; b; &#125; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> k, <span class="type">int</span> last, <span class="type">int</span> s)</span></span></span><br><span class="line"><span class="function"></span>&#123;   </span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (k &gt; num)<span class="keyword">return</span> <span class="literal">true</span>; <span class="comment">//所有木棍复原完成</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (s == len)</span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">dfs</span>(k + <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>);<span class="comment">//完成当前木棍的复原，进行下一个</span></span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> fail = <span class="number">0</span>;<span class="comment">//fail记录的是最近一次尝试拼接的木棍长度。这样再回溯时就不会再尝试相同长度的木棍。 （不是很理解还）</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = last; i &lt;= n; i++)<span class="comment">//从last开始</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (!st[i]&amp;&amp;a[i]+s&lt;=len&amp;&amp;fail!=a[i])<span class="comment">//a[i]+s&lt;=len减去不必要的搜索</span></span><br><span class="line">		&#123;</span><br><span class="line">			st[i] = <span class="literal">true</span>;<span class="comment">//标记</span></span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">dfs</span>(k, i, s + a[i]))<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">			st[i] = <span class="literal">false</span>;<span class="comment">//复原</span></span><br><span class="line"></span><br><span class="line">			fail = a[i];</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (s == <span class="number">0</span> || s + a[i] == len)<span class="keyword">return</span> <span class="literal">false</span>;<span class="comment">//（菜狗还不是很理解）</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (cin &gt;&gt; n &amp;&amp; n)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">memset</span>(st, <span class="literal">false</span>, <span class="keyword">sizeof</span> st);</span><br><span class="line">		<span class="built_in">memset</span>(a, <span class="number">0</span>, <span class="keyword">sizeof</span> a);</span><br><span class="line">		m = num = len = sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			cin &gt;&gt; a[i];</span><br><span class="line">			sum += a[i];</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="built_in">sort</span>(a + <span class="number">1</span>, a + <span class="number">1</span> + n, cmp);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (len = a[<span class="number">1</span>]; len &lt;= sum / <span class="number">2</span>; len++)<span class="comment">//保证整除并且len的长度小于sum/2 若大于则只有一根</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (sum % len)<span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">			num = sum / len;</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">dfs</span>(<span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>)) &#123;</span><br><span class="line">				m = <span class="number">1</span>;</span><br><span class="line">				cout &lt;&lt; len &lt;&lt; endl;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(!m)cout &lt;&lt; sum &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -284,7 +272,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://example.com/2023/05/11/%E6%9C%A8%E6%A3%8D/" title="Sticks">http://example.com/2023/05/11/木棍/</a>
+    <a href="http://example.com/2023/05/17/Flip-Game/" title="Flip Game">http://example.com/2023/05/17/Flip-Game/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -314,7 +302,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/oj/" rel="tag"># oj</a>
+              <a href="/tags/oj%EF%BC%9B/" rel="tag"># oj；</a>
           </div>
 
         
@@ -323,12 +311,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/05/08/Dijkstra%E7%AE%97%E6%B3%95/" rel="prev" title="Dijkstra算法">
-      <i class="fa fa-chevron-left"></i> Dijkstra算法
+    <a href="/2023/05/16/%E5%8F%98%E6%8D%A2%E7%9A%84%E8%BF%B7%E5%AE%AB/" rel="prev" title="变换的迷宫">
+      <i class="fa fa-chevron-left"></i> 变换的迷宫
     </a></div>
       <div class="post-nav-item">
-    <a href="/2023/05/12/hello-world/" rel="next" title="Hello World">
-      Hello World <i class="fa fa-chevron-right"></i>
+    <a href="/2023/05/17/Saving-Tang-Monk/" rel="next" title="Saving Tang Monk">
+      Saving Tang Monk <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -393,7 +381,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AC%E4%BB%A3%E7%A0%81"><span class="nav-number">1.</span> <span class="nav-text">AC代码</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5"><span class="nav-number">2.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA"><span class="nav-number">3.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">4.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC%E4%BB%A3%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">AC代码</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
