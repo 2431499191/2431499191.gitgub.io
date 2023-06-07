@@ -22,20 +22,20 @@
 
 <link rel="stylesheet" href="/js/prism/prism.css">
 
-  <meta name="description" content="题面给出两个单词（开始单词和结束单词）以及一个词典。找出从开始单词转换到结束单词所需的最短转换序列。转换规则如下：每次只能改变一个字母；转换过程中出现的单词（除开始单词和结束单词外）必须存在于词典中。例如，开始单词为 hit，结束单词为 cog，词典为 hot, dog, dot, lot, log,那么一种可能的最短变换是 hit  hot  dot  dog  cog，所以返回的结果是序列的长">
+  <meta name="description" content="题面题目描述 5 个砝码，用天平称重时，我们希望用尽可能少的砝码组合称出尽可能多的重量。如果只有 5 个砝码，重量分别是 1，3，9，27，81。则它们可以组合称出 1 到 121 之间任意整数重量（砝码允许放在左右两个盘中）。本题目要求编程实现：对用户给定的重量，给出砝码组合方案。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="单词序列">
-<meta property="og:url" content="http://example.com/2023/05/15/%E5%8D%95%E8%AF%8D%E5%BA%8F%E5%88%97/index.html">
+<meta property="og:title" content="砝码称重">
+<meta property="og:url" content="http://example.com/2023/06/07/%E7%A0%9D%E7%A0%81%E7%A7%B0%E9%87%8D/index.html">
 <meta property="og:site_name" content="Fly">
-<meta property="og:description" content="题面给出两个单词（开始单词和结束单词）以及一个词典。找出从开始单词转换到结束单词所需的最短转换序列。转换规则如下：每次只能改变一个字母；转换过程中出现的单词（除开始单词和结束单词外）必须存在于词典中。例如，开始单词为 hit，结束单词为 cog，词典为 hot, dog, dot, lot, log,那么一种可能的最短变换是 hit  hot  dot  dog  cog，所以返回的结果是序列的长">
+<meta property="og:description" content="题面题目描述 5 个砝码，用天平称重时，我们希望用尽可能少的砝码组合称出尽可能多的重量。如果只有 5 个砝码，重量分别是 1，3，9，27，81。则它们可以组合称出 1 到 121 之间任意整数重量（砝码允许放在左右两个盘中）。本题目要求编程实现：对用户给定的重量，给出砝码组合方案。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-15T14:15:05.000Z">
-<meta property="article:modified_time" content="2023-05-16T08:32:51.246Z">
+<meta property="article:published_time" content="2023-06-07T13:04:48.000Z">
+<meta property="article:modified_time" content="2023-06-07T13:08:56.943Z">
 <meta property="article:author" content="大臣">
-<meta property="article:tag" content="oj">
+<meta property="article:tag" content="-oj">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2023/05/15/%E5%8D%95%E8%AF%8D%E5%BA%8F%E5%88%97/">
+<link rel="canonical" href="http://example.com/2023/06/07/%E7%A0%9D%E7%A0%81%E7%A7%B0%E9%87%8D/">
 
 
 <script id="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>单词序列 | Fly</title>
+  <title>砝码称重 | Fly</title>
   
 
 
@@ -191,7 +191,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/15/%E5%8D%95%E8%AF%8D%E5%BA%8F%E5%88%97/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/07/%E7%A0%9D%E7%A0%81%E7%A7%B0%E9%87%8D/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -204,7 +204,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          单词序列
+          砝码称重
         </h1>
 
         <div class="post-meta">
@@ -216,24 +216,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2023-05-15 22:15:05" itemprop="dateCreated datePublished" datetime="2023-05-15T22:15:05+08:00">2023-05-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-05-16 16:32:51" itemprop="dateModified" datetime="2023-05-16T16:32:51+08:00">2023-05-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/oj/" itemprop="url" rel="index"><span itemprop="name">oj</span></a>
-                </span>
+              <time title="创建时间：2023-06-07 21:04:48 / 修改时间：21:08:56" itemprop="dateCreated datePublished" datetime="2023-06-07T21:04:48+08:00">2023-06-07</time>
             </span>
 
           
@@ -254,13 +239,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h2><p>给出两个单词（开始单词和结束单词）以及一个词典。找出从开始单词转换到结束单词所需的最短转换序列。转换规则如下：每次只能改变一个字母；转换过程中出现的单词（除开始单词和结束单词外）必须存在于词典中。例如，开始单词为 hit，结束单词为 cog，词典为 hot, dog, dot, lot, log,那么一种可能的最短变换是 hit  hot  dot  dog  cog，所以返回的结果是序列的长度 5。注意：如果找不到这种变换，则输出 0；词典中所有单词的长度相同；所有的单词都由小写字母构成；开始单词和结束单词可以不在词典中。</p>
+        <h2 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h2><p>题目描述 5 个砝码，用天平称重时，我们希望用尽可能少的砝码组合称出尽可能多的重量。如果只有 5 个砝码，重量分别是 1，3，9，27，81。则它们可以组合称出 1 到 121 之间任意整数重量（砝码允许放在左右两个盘中）。本题目要求编程实现：对用户给定的重量，给出砝码组合方案。</p>
 <span id="more"></span>
 
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">19</span></span><br></pre></td></tr></table></figure>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2> <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">27</span><span class="number">-9</span>+<span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<p>输入<br>hit cog<br>hot dot dog lot log</p>
-<p>输出<br>5</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h2 id="AC-代码"><a href="#AC-代码" class="headerlink" title="AC 代码"></a>AC 代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;unordered_map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;map&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> tt = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">string start, last;</span><br><span class="line">queue&lt;string&gt; q;  <span class="comment">//队列</span></span><br><span class="line">unordered_map&lt;string, <span class="type">int</span>&gt; dis;  <span class="comment">//string 对应的距离</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">bfs</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	q.<span class="built_in">push</span>(start);</span><br><span class="line"></span><br><span class="line">	dis[start] = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (!q.<span class="built_in">empty</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		string t = q.<span class="built_in">front</span>();</span><br><span class="line">		q.<span class="built_in">pop</span>();</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (t == last)<span class="keyword">return</span> dis[last] ;</span><br><span class="line"></span><br><span class="line">		string str = t;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; t.<span class="built_in">size</span>();i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="type">char</span> d = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">			<span class="keyword">for</span> (d = <span class="string">&#x27;a&#x27;</span>; d &lt;= <span class="string">&#x27;z&#x27;</span>; d++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="type">char</span> c = t[i];</span><br><span class="line">				t[i] = d;</span><br><span class="line">				<span class="keyword">if</span> (dis.<span class="built_in">count</span>(t)&amp;&amp;!dis[t]) <span class="comment">//在字典中并且是第一次出现</span></span><br><span class="line">				&#123;</span><br><span class="line">					q.<span class="built_in">push</span>(t); <span class="comment">//入队</span></span><br><span class="line">					dis[t] = dis[str] + <span class="number">1</span>; <span class="comment">//更新</span></span><br><span class="line">				&#125;</span><br><span class="line">				t[i] = c;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> dis[last];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cin &gt;&gt; start &gt;&gt; last;</span><br><span class="line"></span><br><span class="line">	cin.<span class="built_in">ignore</span>(); <span class="comment">// 忽略换行符</span></span><br><span class="line"></span><br><span class="line">	string str;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="built_in">getline</span>(cin, str);</span><br><span class="line"></span><br><span class="line">	string a[<span class="number">1000</span>];</span><br><span class="line">	</span><br><span class="line">	dis[last] = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; str.<span class="built_in">size</span>(); i++)</span><br><span class="line">	&#123;	</span><br><span class="line">		<span class="type">char</span> c = str[i];</span><br><span class="line">		<span class="keyword">if</span> (c == <span class="string">&#x27; &#x27;</span>)  tt++;</span><br><span class="line">		<span class="keyword">if</span> (c != <span class="string">&#x27; &#x27;</span>)a[tt] += c;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= tt; i++) dis[a[i]] = <span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">	cout &lt;&lt; <span class="built_in">bfs</span>()&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="ac代码"><a href="#ac代码" class="headerlink" title="ac代码"></a>ac代码</h2> <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;map&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> ans = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> a[<span class="number">6</span>] = &#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">9</span>,<span class="number">27</span>,<span class="number">81</span>&#125;;</span><br><span class="line"><span class="type">int</span> bb[<span class="number">6</span>], cc[<span class="number">6</span>];</span><br><span class="line"><span class="type">char</span> b[<span class="number">6</span>], c[<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> sum, <span class="type">int</span> cnt, <span class="type">int</span> pos)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (cnt &gt;= ans)<span class="keyword">return</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span> (pos &lt; <span class="number">-1</span>)<span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (sum == n)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			cc[i] = bb[i];</span><br><span class="line">			c[i] = b[i];</span><br><span class="line">		&#125;</span><br><span class="line">		ans = cnt;</span><br><span class="line">		<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">dfs</span>(sum, cnt, pos - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	bb[pos] = a[pos];</span><br><span class="line">	b[pos] = <span class="string">&#x27;+&#x27;</span>;</span><br><span class="line">	<span class="built_in">dfs</span>(sum + a[pos], cnt + <span class="number">1</span>, pos - <span class="number">1</span>);</span><br><span class="line">	bb[pos] = <span class="number">0</span>;</span><br><span class="line">	b[pos] = <span class="string">&#x27; &#x27;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	bb[pos] = a[pos];</span><br><span class="line">	b[pos] = <span class="string">&#x27;-&#x27;</span>;</span><br><span class="line">	<span class="built_in">dfs</span>(sum - a[pos], cnt + <span class="number">1</span>, pos - <span class="number">1</span>);</span><br><span class="line">	bb[pos] = <span class="number">0</span>;</span><br><span class="line">	b[pos] = <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">dfs</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">4</span>);</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> m = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">4</span>; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (cc[i]) &#123;</span><br><span class="line">			<span class="keyword">if</span> (m)cout &lt;&lt; c[i];</span><br><span class="line">			cout &lt;&lt; cc[i]; m++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -285,7 +270,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://example.com/2023/05/15/%E5%8D%95%E8%AF%8D%E5%BA%8F%E5%88%97/" title="单词序列">http://example.com/2023/05/15/单词序列/</a>
+    <a href="http://example.com/2023/06/07/%E7%A0%9D%E7%A0%81%E7%A7%B0%E9%87%8D/" title="砝码称重">http://example.com/2023/06/07/砝码称重/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -315,7 +300,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/oj/" rel="tag"># oj</a>
+              <a href="/tags/oj/" rel="tag"># -oj</a>
           </div>
 
         
@@ -324,13 +309,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/05/15/%E5%85%AB%E6%95%B0%E7%A0%81/" rel="prev" title="八数码">
-      <i class="fa fa-chevron-left"></i> 八数码
+    <a href="/2023/06/05/%E5%8C%BA%E9%97%B4%E7%9B%B8%E4%BA%A4/" rel="prev" title="区间相交">
+      <i class="fa fa-chevron-left"></i> 区间相交
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2023/05/16/%E5%8F%98%E6%8D%A2%E7%9A%84%E8%BF%B7%E5%AE%AB/" rel="next" title="变换的迷宫">
-      变换的迷宫 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -394,7 +376,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-%E4%BB%A3%E7%A0%81"><span class="nav-number">3.</span> <span class="nav-text">AC 代码</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5"><span class="nav-number">2.</span> <span class="nav-text">输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA"><span class="nav-number">3.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ac%E4%BB%A3%E7%A0%81"><span class="nav-number">4.</span> <span class="nav-text">ac代码</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
