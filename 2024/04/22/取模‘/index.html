@@ -22,22 +22,19 @@
 
 <link rel="stylesheet" href="/js/prism/prism.css">
 
-  <meta name="description" content="题面 输入1234564 4 10............S**P0 0 0 输出1YES">
+  <meta name="description" content="概念模算数或称同余运算（英语：Modular arithmetic）是一个整数的算术系统，其中数字超过一定值后（称为模或余数）后会“卷回”到较小的数值，模算数最早是出现在卡尔·弗里德里希·高斯在1801年出版的《算术研究》一书中。模算数常见的应用是在十二小时制，将一天分为二个以十二小时计算的单位。假设现在七点，八小时后会是三点。用一般的算术加法，会得到7 + 8 &#x3D; 15，但在十二小时制">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hero In Maze">
-<meta property="og:url" content="http://example.com/2023/05/18/Hero-In-Maze/index.html">
+<meta property="og:title" content="取模">
+<meta property="og:url" content="http://example.com/2024/04/22/%E5%8F%96%E6%A8%A1%E2%80%98/index.html">
 <meta property="og:site_name" content="Fly">
-<meta property="og:description" content="题面 输入1234564 4 10............S**P0 0 0 输出1YES">
+<meta property="og:description" content="概念模算数或称同余运算（英语：Modular arithmetic）是一个整数的算术系统，其中数字超过一定值后（称为模或余数）后会“卷回”到较小的数值，模算数最早是出现在卡尔·弗里德里希·高斯在1801年出版的《算术研究》一书中。模算数常见的应用是在十二小时制，将一天分为二个以十二小时计算的单位。假设现在七点，八小时后会是三点。用一般的算术加法，会得到7 + 8 &#x3D; 15，但在十二小时制">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/2431499191/tu@main/202305181146212.png">
-<meta property="article:published_time" content="2023-05-18T03:47:33.000Z">
-<meta property="article:modified_time" content="2023-05-18T03:49:31.591Z">
+<meta property="article:published_time" content="2024-04-22T12:15:46.000Z">
+<meta property="article:modified_time" content="2024-04-22T12:16:23.819Z">
 <meta property="article:author" content="大臣">
-<meta property="article:tag" content="oj">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/2431499191/tu@main/202305181146212.png">
 
-<link rel="canonical" href="http://example.com/2023/05/18/Hero-In-Maze/">
+<link rel="canonical" href="http://example.com/2024/04/22/%E5%8F%96%E6%A8%A1%E2%80%98/">
 
 
 <script id="page-configurations">
@@ -50,7 +47,7 @@
   };
 </script>
 
-  <title>Hero In Maze | Fly</title>
+  <title>取模 | Fly</title>
   
 
 
@@ -193,7 +190,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/18/Hero-In-Maze/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/22/%E5%8F%96%E6%A8%A1%E2%80%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -206,7 +203,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hero In Maze
+          取模
         </h1>
 
         <div class="post-meta">
@@ -220,7 +217,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-05-18 11:47:33 / 修改时间：11:49:31" itemprop="dateCreated datePublished" datetime="2023-05-18T11:47:33+08:00">2023-05-18</time>
+              <time title="创建时间：2024-04-22 20:15:46 / 修改时间：20:16:23" itemprop="dateCreated datePublished" datetime="2024-04-22T20:15:46+08:00">2024-04-22</time>
             </span>
 
           
@@ -241,12 +238,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h2><p><img src="https://cdn.jsdelivr.net/gh/2431499191/tu@main/202305181146212.png"></p>
-<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span> <span class="number">4</span> <span class="number">10</span></span><br><span class="line">....</span><br><span class="line">....</span><br><span class="line">....</span><br><span class="line">S**P</span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
-<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YES</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;unordered_map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;queue&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; PII;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">20</span>;</span><br><span class="line"><span class="type">int</span> n, m, k, ax, ay, bx, by;</span><br><span class="line"><span class="type">char</span> map[N][N];</span><br><span class="line">queue&lt;PII&gt; q;</span><br><span class="line"><span class="type">int</span> dist[N][N];</span><br><span class="line"><span class="type">int</span> dx[<span class="number">4</span>] = &#123; <span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span> &#125;, dy[<span class="number">4</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">bfs</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	q.<span class="built_in">push</span>(&#123; ax,ay &#125;);</span><br><span class="line">	dist[ax][ay] = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (!q.<span class="built_in">empty</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		PII t = q.<span class="built_in">front</span>();</span><br><span class="line">		q.<span class="built_in">pop</span>();</span><br><span class="line"></span><br><span class="line">		<span class="type">int</span> x = t.first, y = t.second;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (x == bx &amp;&amp; y == by) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">3</span>; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="type">int</span> xx = x + dx[i], yy = y + dy[i];</span><br><span class="line">			<span class="keyword">if</span> (xx &gt;= <span class="number">0</span> &amp;&amp; xx &lt; m &amp;&amp; yy &gt;= <span class="number">0</span> &amp;&amp; yy &lt; n &amp;&amp; dist[xx][yy]==<span class="number">-1</span> &amp;&amp; map[xx][yy]!=<span class="string">&#x27;*&#x27;</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				dist[xx][yy] = dist[x][y] + <span class="number">1</span>;</span><br><span class="line">				<span class="keyword">if</span>(dist[xx][yy]&lt;=k) q.<span class="built_in">push</span>(&#123; xx,yy &#125;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (cin &gt;&gt; n &gt;&gt; m &gt;&gt; k &amp;&amp; n &amp;&amp; m &amp;&amp; k )</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">memset</span>(map, <span class="string">&#x27; &#x27;</span>, <span class="keyword">sizeof</span> map);</span><br><span class="line">		<span class="built_in">memset</span>(dist, <span class="number">-1</span>, <span class="keyword">sizeof</span> dist);</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++)</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				cin &gt;&gt; map[i][j];</span><br><span class="line">				<span class="keyword">if</span> (map[i][j] == <span class="string">&#x27;S&#x27;</span>)ax = i, ay = j;</span><br><span class="line">				<span class="keyword">if</span> (map[i][j] == <span class="string">&#x27;P&#x27;</span>)bx = i, by = j;</span><br><span class="line">			&#125;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">bfs</span>())cout &lt;&lt; <span class="string">&quot;YES&quot;</span>&lt;&lt;endl;</span><br><span class="line">		<span class="keyword">else</span>	cout &lt;&lt; <span class="string">&quot;NO&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>模算数或称同余运算（英语：Modular arithmetic）是一个整数的算术系统，其中数字超过一定值后（称为模或余数）后会“卷回”到较小的数值，模算数最早是出现在卡尔·弗里德里希·高斯在1801年出版的《算术研究》一书中。<br>模算数常见的应用是在十二小时制，将一天分为二个以十二小时计算的单位。假设现在七点，八小时后会是三点。用一般的算术加法，会得到7 + 8 &#x3D; 15，但在十二小时制中，超过十二小时会归零，不存在“十五点”。类似的情形，若时钟目前是十二时，二十一小时后会是九点，而不是三十三点。小时数超过十二后会再回到一，为模12的模算数系统。依照上述的定义，12和12本身同余，也和0同余，因此12:00的时间也可以称为是0:00，因为模12时，12和0同余。</p>
+<p>以上见于维基百科</p>
+<p>模算数可以在导入整数的同余关系后，通过经典算数的运算法则来推导模运算的运算法则。若有两个正整数𝑎和𝑏，并且二数的差值𝑎−𝑏为𝑛的整数倍数，我们就可以说𝑎和𝑏在模𝑛同余。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>我们在模算数里可以使用除除法以外的任何四则运算，除法可以使用逆元来解决。<br>满足结合律，分配律，交换律。</p>
 
     </div>
 
@@ -272,7 +267,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://example.com/2023/05/18/Hero-In-Maze/" title="Hero In Maze">http://example.com/2023/05/18/Hero-In-Maze/</a>
+    <a href="http://example.com/2024/04/22/%E5%8F%96%E6%A8%A1%E2%80%98/" title="取模">http://example.com/2024/04/22/取模‘/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -301,9 +296,6 @@
 
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/oj/" rel="tag"># oj</a>
-          </div>
 
         
 
@@ -311,13 +303,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/05/18/%E5%B0%8F%E9%BC%A0%E8%BF%B7%E5%AE%AB%E9%97%AE%E9%A2%98/" rel="prev" title="小鼠迷宫问题">
-      <i class="fa fa-chevron-left"></i> 小鼠迷宫问题
+    <a href="/2023/09/01/8%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98/" rel="prev" title="8皇后问题">
+      <i class="fa fa-chevron-left"></i> 8皇后问题
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2023/05/19/01%E8%83%8C%E5%8C%85/" rel="next" title="01背包">
-      01背包 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -381,7 +370,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5"><span class="nav-number">2.</span> <span class="nav-text">输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA"><span class="nav-number">3.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">2.</span> <span class="nav-text">结论</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

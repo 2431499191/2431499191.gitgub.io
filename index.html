@@ -185,6 +185,73 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/22/%E5%8F%96%E6%A8%A1%E2%80%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="大臣">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fly">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/22/%E5%8F%96%E6%A8%A1%E2%80%98/" class="post-title-link" itemprop="url">取模</a>
+        </h2>
+
+        <div class="post-meta">
+
+		
+		
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-04-22 20:15:46 / 修改时间：20:16:23" itemprop="dateCreated datePublished" datetime="2024-04-22T20:15:46+08:00">2024-04-22</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>模算数或称同余运算（英语：Modular arithmetic）是一个整数的算术系统，其中数字超过一定值后（称为模或余数）后会“卷回”到较小的数值，模算数最早是出现在卡尔·弗里德里希·高斯在1801年出版的《算术研究》一书中。<br>模算数常见的应用是在十二小时制，将一天分为二个以十二小时计算的单位。假设现在七点，八小时后会是三点。用一般的算术加法，会得到7 + 8 &#x3D; 15，但在十二小时制中，超过十二小时会归零，不存在“十五点”。类似的情形，若时钟目前是十二时，二十一小时后会是九点，而不是三十三点。小时数超过十二后会再回到一，为模12的模算数系统。依照上述的定义，12和12本身同余，也和0同余，因此12:00的时间也可以称为是0:00，因为模12时，12和0同余。</p>
+<p>以上见于维基百科</p>
+<p>模算数可以在导入整数的同余关系后，通过经典算数的运算法则来推导模运算的运算法则。若有两个正整数𝑎和𝑏，并且二数的差值𝑎−𝑏为𝑛的整数倍数，我们就可以说𝑎和𝑏在模𝑛同余。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>我们在模算数里可以使用除除法以外的任何四则运算，除法可以使用逆元来解决。<br>满足结合律，分配律，交换律。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+	 
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/01/8%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -854,84 +921,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/17/Flip-Game/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="大臣">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fly">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/17/Flip-Game/" class="post-title-link" itemprop="url">Flip Game</a>
-        </h2>
-
-        <div class="post-meta">
-
-		
-		
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-05-17 16:50:26 / 修改时间：16:55:15" itemprop="dateCreated datePublished" datetime="2023-05-17T16:50:26+08:00">2023-05-17</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h2><p>在一个 4 * 4 的棋盘上，每个格子都摆着一个棋子。棋子一面为黑，一面为白。有一种操作叫做“翻转”，对某一枚棋子做“翻转”操作，则会将该棋子及其上下左右的 4 枚棋子翻过来。给定初始的棋盘局面（有的棋子黑面朝上，有的棋子白面朝上），求最少需要多少次操作，能使得所有棋子都白面朝上或黑面朝上。</p>
-<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bwwb</span><br><span class="line">bbwb</span><br><span class="line">bwwb</span><br><span class="line">bwww</span><br></pre></td></tr></table></figure>
-
-<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/05/17/Flip-Game/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-	 
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -999,7 +992,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

@@ -22,35 +22,28 @@
 
 <link rel="stylesheet" href="/js/prism/prism.css">
 
-  <meta name="description" content="题面 输入1234564 4 10............S**P0 0 0 输出1YES">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hero In Maze">
-<meta property="og:url" content="http://example.com/2023/05/18/Hero-In-Maze/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Fly">
+<meta property="og:url" content="http://example.com/page/3/index.html">
 <meta property="og:site_name" content="Fly">
-<meta property="og:description" content="题面 输入1234564 4 10............S**P0 0 0 输出1YES">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/2431499191/tu@main/202305181146212.png">
-<meta property="article:published_time" content="2023-05-18T03:47:33.000Z">
-<meta property="article:modified_time" content="2023-05-18T03:49:31.591Z">
 <meta property="article:author" content="大臣">
-<meta property="article:tag" content="oj">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/2431499191/tu@main/202305181146212.png">
 
-<link rel="canonical" href="http://example.com/2023/05/18/Hero-In-Maze/">
+<link rel="canonical" href="http://example.com/page/3/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : false,
-    isPost : true,
+    isHome : true,
+    isPost : false,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Hero In Maze | Fly</title>
+  <title>Fly</title>
   
 
 
@@ -186,14 +179,13 @@
         <div class="content-wrap">
           
 
-          <div class="content post posts-expand">
+          <div class="content index posts-expand">
             
-
-    
+      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/18/Hero-In-Maze/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/09/%E6%B1%89%E8%AF%BA%E5%A1%94/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -205,9 +197,10 @@
       <meta itemprop="name" content="Fly">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Hero In Maze
-        </h1>
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/04/09/%E6%B1%89%E8%AF%BA%E5%A1%94/" class="post-title-link" itemprop="url">汉诺塔</a>
+        </h2>
 
         <div class="post-meta">
 
@@ -218,19 +211,27 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-05-18 11:47:33 / 修改时间：11:49:31" itemprop="dateCreated datePublished" datetime="2023-05-18T11:47:33+08:00">2023-05-18</time>
+              <time title="创建时间：2023-04-09 22:15:42" itemprop="dateCreated datePublished" datetime="2023-04-09T22:15:42+08:00">2023-04-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-15 22:22:40" itemprop="dateModified" datetime="2023-05-15T22:22:40+08:00">2023-05-15</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/oj/" itemprop="url" rel="index"><span itemprop="name">oj</span></a>
+                </span>
             </span>
 
           
-            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span id="busuanzi_value_page_pv"></span>
-            </span>
 
         </div>
       </header>
@@ -241,13 +242,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h2><p><img src="https://cdn.jsdelivr.net/gh/2431499191/tu@main/202305181146212.png"></p>
-<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span> <span class="number">4</span> <span class="number">10</span></span><br><span class="line">....</span><br><span class="line">....</span><br><span class="line">....</span><br><span class="line">S**P</span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
-<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YES</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;unordered_map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;queue&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; PII;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">20</span>;</span><br><span class="line"><span class="type">int</span> n, m, k, ax, ay, bx, by;</span><br><span class="line"><span class="type">char</span> map[N][N];</span><br><span class="line">queue&lt;PII&gt; q;</span><br><span class="line"><span class="type">int</span> dist[N][N];</span><br><span class="line"><span class="type">int</span> dx[<span class="number">4</span>] = &#123; <span class="number">1</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span> &#125;, dy[<span class="number">4</span>] = &#123; <span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">bfs</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	q.<span class="built_in">push</span>(&#123; ax,ay &#125;);</span><br><span class="line">	dist[ax][ay] = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (!q.<span class="built_in">empty</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		PII t = q.<span class="built_in">front</span>();</span><br><span class="line">		q.<span class="built_in">pop</span>();</span><br><span class="line"></span><br><span class="line">		<span class="type">int</span> x = t.first, y = t.second;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (x == bx &amp;&amp; y == by) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">3</span>; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="type">int</span> xx = x + dx[i], yy = y + dy[i];</span><br><span class="line">			<span class="keyword">if</span> (xx &gt;= <span class="number">0</span> &amp;&amp; xx &lt; m &amp;&amp; yy &gt;= <span class="number">0</span> &amp;&amp; yy &lt; n &amp;&amp; dist[xx][yy]==<span class="number">-1</span> &amp;&amp; map[xx][yy]!=<span class="string">&#x27;*&#x27;</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				dist[xx][yy] = dist[x][y] + <span class="number">1</span>;</span><br><span class="line">				<span class="keyword">if</span>(dist[xx][yy]&lt;=k) q.<span class="built_in">push</span>(&#123; xx,yy &#125;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (cin &gt;&gt; n &gt;&gt; m &gt;&gt; k &amp;&amp; n &amp;&amp; m &amp;&amp; k )</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">memset</span>(map, <span class="string">&#x27; &#x27;</span>, <span class="keyword">sizeof</span> map);</span><br><span class="line">		<span class="built_in">memset</span>(dist, <span class="number">-1</span>, <span class="keyword">sizeof</span> dist);</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++)</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				cin &gt;&gt; map[i][j];</span><br><span class="line">				<span class="keyword">if</span> (map[i][j] == <span class="string">&#x27;S&#x27;</span>)ax = i, ay = j;</span><br><span class="line">				<span class="keyword">if</span> (map[i][j] == <span class="string">&#x27;P&#x27;</span>)bx = i, by = j;</span><br><span class="line">			&#125;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">bfs</span>())cout &lt;&lt; <span class="string">&quot;YES&quot;</span>&lt;&lt;endl;</span><br><span class="line">		<span class="keyword">else</span>	cout &lt;&lt; <span class="string">&quot;NO&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+          <p>好好学习，天天向上。</p>
+<h1 id="汉诺塔问题"><a href="#汉诺塔问题" class="headerlink" title="汉诺塔问题"></a>汉诺塔问题</h1><p>古代有一座汉诺塔， 塔内有 3 个座 A、B、C,A 座上有 几 个盘子， 盘子大小不等， 大的在下，小的 在上， 如图 4−1 所示。有一个和尚想把这n个盘子从A座移到 C座， 但每次只能移动一个盘子， 并且在移动过程中， 3 个座上的盘子始终保持大盘在下，小 盘在上。在移动过程中可以利用 B座来放盘子。要求输出移动的步骤。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/04/09/%E6%B1%89%E8%AF%BA%E5%A1%94/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
     </div>
 
     
@@ -255,86 +260,24 @@
     
 
 	 
-   <div>
-     <div>
-    
-        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
-    
-</div>
-   </div>
- 
-        
-
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>大臣
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="http://example.com/2023/05/18/Hero-In-Maze/" title="Hero In Maze">http://example.com/2023/05/18/Hero-In-Maze/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
-
-        
-
-  <div class="followme">
-    <p>欢迎关注我的其它发布渠道</p>
-
-    <div class="social-list">
-
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/atom.xml">
-            <span class="icon">
-              <i class="fa fa-rss"></i>
-            </span>
-
-            <span class="label">RSS</span>
-          </a>
-        </div>
-    </div>
-  </div>
-
-
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/oj/" rel="tag"># oj</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2023/05/18/%E5%B0%8F%E9%BC%A0%E8%BF%B7%E5%AE%AB%E9%97%AE%E9%A2%98/" rel="prev" title="小鼠迷宫问题">
-      <i class="fa fa-chevron-left"></i> 小鼠迷宫问题
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2023/05/19/01%E8%83%8C%E5%8C%85/" rel="next" title="01背包">
-      01背包 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
+        <div class="post-eof"></div>
       </footer>
-    
   </article>
   
   
   
 
 
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
+
 
           </div>
           
-    
-  <div class="comments">
-    <div id="lv-container" data-id="city" data-uid="MTAyMC81ODMyNC8zNDc4Nw=="></div>
-  </div>
-  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -381,7 +324,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5"><span class="nav-number">2.</span> <span class="nav-text">输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA"><span class="nav-number">3.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -640,21 +582,6 @@ window.addEventListener('pjax:success', () => {
 
   
 
-<script>
-NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-});
-</script>
 
     </div>
 </body>
